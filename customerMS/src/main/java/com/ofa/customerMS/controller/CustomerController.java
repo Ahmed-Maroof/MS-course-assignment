@@ -26,14 +26,14 @@ public class CustomerController {
         return "I am Ok";
     }
 
-    @GetMapping("/{id}/orders/")
+    @GetMapping("/orders/{id}")
     public ResponseEntity<List<Order>> getCustomerOrders(@PathVariable("id") int id) {
-        List<Order> orders = orderServiceFeignClient.getOrders();
+        List<Order> orders = orderServiceFeignClient.getOrders(id);
         return new ResponseEntity<List<Order>>(orders, HttpStatus.OK);
     }
 
     @PostMapping("/customer")
-    private Customer saveStudent(@RequestBody Customer customer) {
+    private Customer saveCustomer(@RequestBody Customer customer) {
         return customerService.saveOrUpdate(customer);
     }
 }

@@ -1,9 +1,21 @@
 package com.ofa.ordersMS.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "ORDERS")
 public class Order {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ID")
     private int id;
-    private String name;
+
+    @Column(name = "PRODUCT_NAME")
+    private String productName;
+
+    @Column(name = "CUSTOMER_ID")
+    private int customerId;
 
     public int getId() {
         return id;
@@ -13,16 +25,20 @@ public class Order {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public Order(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public int getCustomerId() {
+        return customerId;
     }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+
 }

@@ -3,7 +3,8 @@ package com.ofa.customerMS.model;
 public class Order {
 
     private int id;
-    private String name;
+    private int customerId;
+    private String productName;
 
     public int getId() {
         return id;
@@ -13,16 +14,21 @@ public class Order {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
-    public Order(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public String getProductName() {
+        return productName;
     }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+
 }

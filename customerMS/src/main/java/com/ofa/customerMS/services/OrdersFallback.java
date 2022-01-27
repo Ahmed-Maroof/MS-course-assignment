@@ -10,7 +10,7 @@ import java.util.List;
 public class OrdersFallback implements OrderServiceFeignClient {
 
     @Override
-    public List<Order> getOrders() {
+    public List<Order> getOrders(int id) {
         return new ArrayList<Order>();
     }
 

@@ -1,4 +1,4 @@
-package com.ofa.customerMS.model;
+package com.ofa.ordersMS.model;
 
 public class Order {
 

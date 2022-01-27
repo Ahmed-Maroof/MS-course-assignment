@@ -33,8 +33,11 @@ public class Customer {
         this.location = location;
     }
 
-    public Customer(String name, String location) {
-        this.name = name;
-        this.location = location;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -36,4 +36,9 @@ public class CustomerController {
     private Customer saveCustomer(@RequestBody Customer customer) {
         return customerService.saveOrUpdate(customer);
     }
+
+    @GetMapping("/customer/{id}")
+    public Customer getCustomer(@PathVariable("id") int id) {
+        return customerService.getCustomerById(id);
+    }
 }

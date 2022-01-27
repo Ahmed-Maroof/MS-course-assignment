@@ -5,6 +5,8 @@ import com.ofa.customerMS.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class CustomerService {
 
@@ -16,6 +18,12 @@ public class CustomerService {
     }
 
     public Customer getCustomerById(int id) {
-        return customerRepository.findById(id).get();
+        Optional customer = customerRepository.findById(id);
+        if (!customer.isEmpty()) {
+            return (Customer) customer.get();
+        } else {
+            return null;
+
+        }
     }
 }

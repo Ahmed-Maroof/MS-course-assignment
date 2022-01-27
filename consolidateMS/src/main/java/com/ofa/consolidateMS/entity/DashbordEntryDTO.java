@@ -1,6 +1,6 @@
 package com.ofa.consolidateMS.entity;
 
-public class dashbordEntryDTO {
+public class DashbordEntryDTO {
 
     public int customerId;
     public String customerName;

@@ -1,7 +1,6 @@
-package com.ofa.customerMS.services;
+package com.ofa.consolidateMS.service.order;
 
-import com.ofa.customerMS.model.Order;
-import feign.Param;
+import com.ofa.consolidateMS.entity.Order;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
